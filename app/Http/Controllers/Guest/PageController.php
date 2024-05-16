@@ -11,7 +11,4 @@ class PageController extends Controller
         return view('home');
     }
 
-    public function nuovaPagina(){
-        return view('nuova-pagina');
-    }
 }
