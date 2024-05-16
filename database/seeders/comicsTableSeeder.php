@@ -28,7 +28,6 @@ class comicsTableSeeder extends Seeder
             $comic->slug = Helper::getSlug($comic->tile, new Comic());
 
             $comic->save();
-
         }
 
     }

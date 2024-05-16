@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\comic;
 
 class comicsController extends Controller
 {
@@ -11,8 +12,10 @@ class comicsController extends Controller
      */
     public function index()
     {
-        // faccio la query al db e la passo come variabile
-        return view('comics.index');
+
+        $comics_list= Comic::all();
+
+        return view('comics.index', compact('comics_list'));
     }
 
     /**
