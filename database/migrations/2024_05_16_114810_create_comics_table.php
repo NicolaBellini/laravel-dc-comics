@@ -15,12 +15,13 @@ return new class extends Migration
             $table->id();
             $table->string('title',100);
             $table->text('description');
-            $table->decimal('price',5,2);
+            $table->string('price',20);
             $table->string('series',100);
             $table->date('sale_date');
             $table->string('type',100);
             $table->json('artists'); // Utilizza il tipo JSON invece di array
             $table->json('writers');
+            $table->string('slug',120);
             $table->timestamps();
         });
     }
