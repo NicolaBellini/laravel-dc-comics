@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use App\Models\comic;
+use App\functions\Helper;
 
 class comicsTableSeeder extends Seeder
 {
@@ -14,6 +15,6 @@ class comicsTableSeeder extends Seeder
     public function run(): void
     {
         $comic = new Comic();
-
+        $comic->slug=Helper::getSlug($comic->name, new Comic());
     }
 }
