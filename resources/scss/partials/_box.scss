@@ -1,0 +1,44 @@
+.container_cards {
+    background-color: #1a1a1a; // Sfondo scuro del container
+    padding: 50px 0; // Spaziatura sopra e sotto il container
+    .cards {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        .red {
+            background-color: #b1b1b1;
+        }
+    }
+}
+
+.cards .card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    height: 200px;
+    width: 300px;
+    border-radius: 10px;
+    color: rgb(1, 1, 1);
+    cursor: pointer;
+    transition: 400ms;
+
+    p.tip {
+        font-size: 1em;
+        font-weight: 700;
+    }
+
+    p.second-text {
+        font-size: 0.7em;
+    }
+
+    &:hover {
+        transform: scale(1.1, 1.1);
+    }
+}
+
+.cards:hover > .card:not(:hover) {
+    filter: blur(3px);
+    transform: scale(0.9, 0.9);
+}
