@@ -10,7 +10,7 @@
         <h4 class="tip">{{$comic->title}}</h4>
         <h4 class="second-text">{{$comic->type}}</h4>
         <h4 class="second-text">{{$comic->price}}</h4>
-        <a href=""></a>
+        <a href="{{route('comics.show', $comic)}}">vai</a>
     </div>
 
     @endforeach

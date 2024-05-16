@@ -24,6 +24,7 @@ class comicsController extends Controller
     public function create()
     {
 
+
     }
 
     /**
@@ -37,9 +38,10 @@ class comicsController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(comic $comic)
     {
-        //
+
+        return view('comics.show');
     }
 
     /**

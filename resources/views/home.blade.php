@@ -6,11 +6,11 @@
 <div class="container_home">
   <div class="palette">
     @foreach ($comics as  $comic)
-        <div class="color">
+        <a href="{{route('comics.show', $comic)}}" class="color">
             <div class="text">
                 <span>{{$comic->title}}</span>
             </div>
-        </div>
+        </a>
     @endforeach
   </div>
 
