@@ -20,40 +20,13 @@
             font-weight: 600;
             letter-spacing: 1px;
             transition: flex 0.1s linear;
+            background-color: $blue-600;
+            border: 2px solid white;
+            box-shadow: inset -10px 0 10px rgba(92, 92, 92, 0.5);
 
             span {
                 opacity: 0;
                 transition: opacity 0.1s linear;
-            }
-
-            @for $i from 1 through 12 {
-                &:nth-child(#{$i}) {
-                    @if $i == 1 {
-                        background: $blue-800;
-                    } @else if $i == 2 {
-                        background: $blue-900;
-                    } @else if $i == 3 {
-                        background: $blue-800;
-                    } @else if $i == 4 {
-                        background: $blue-700;
-                    } @else if $i == 5 {
-                        background: $blue-600;
-                    } @else if $i == 6 {
-                        background: $blue-500;
-                    } @else if $i == 7 {
-                        background: $blue-600;
-                    } @else if $i == 8 {
-                        background: $blue-700;
-                    } @else if $i == 9 {
-                        background: $blue-800;
-                    } @else if $i == 10 {
-                        background: $blue-900;
-                    } @else if $i == 11 {
-                        background: $blue-800;
-                    } @else if $i == 12 {
-                        background: $blue-700;
-                    }
-                }
             }
 
             &:hover {
