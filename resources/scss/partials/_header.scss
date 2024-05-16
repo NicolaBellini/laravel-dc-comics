@@ -1,0 +1,29 @@
+.dc-header {
+    background-color: $dc-red;
+    color: white;
+    padding: 20px 0;
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo {
+        font-size: 28px;
+    }
+
+    .nav-links {
+        a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}

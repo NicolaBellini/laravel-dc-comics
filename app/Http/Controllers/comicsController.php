@@ -20,7 +20,7 @@ class comicsController extends Controller
      */
     public function create()
     {
-        //
+
     }
 
     /**
