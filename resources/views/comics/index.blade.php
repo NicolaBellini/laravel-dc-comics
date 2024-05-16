@@ -2,18 +2,16 @@
 
 @section('content')
 
-<div class="container_cards">
-
-    <div class="cards d-flex flex-wrap">
-@foreach ($comics_list as $comic)
-    <div class="card red">
-        <h4 class="tip">{{$comic->title}}</h4>
-        <h4 class="second-text">{{$comic->type}}</h4>
-        <h4 class="second-text">{{$comic->price}}</h4>
-        <a href="{{route('comics.show', $comic)}}">vai</a>
-    </div>
-
+<div class="container_home">
+  <div class="palette">
+    @foreach ($comics as  $comic)
+        <a href="{{route('comics.show', $comic)}}" class="color">
+            <div class="text">
+                <span>{{$comic->title}}</span>
+            </div>
+        </a>
     @endforeach
-</div>
+  </div>
+
 </div>
 @endsection

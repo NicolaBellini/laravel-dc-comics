@@ -9,7 +9,7 @@ use App\Models\comic;
 class PageController extends Controller
 {
     public function index(){
-        $comics = Comic::all();
+        $comics = Comic::count();
         return view('home', compact('comics'));
     }
 

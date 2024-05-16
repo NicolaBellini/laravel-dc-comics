@@ -3,16 +3,10 @@
 @section('content')
 
 
-<div class="container_home">
-  <div class="palette">
-    @foreach ($comics as  $comic)
-        <a href="{{route('comics.show', $comic)}}" class="color">
-            <div class="text">
-                <span>{{$comic->title}}</span>
-            </div>
-        </a>
-    @endforeach
-  </div>
+ <section class="container_home d-flex flex-column justify-content-center align-item-start ps-5  hero">
+    <h1>Nel catalogo sono presenti {{$comics}} fumetti</h1>
+    <p>Explore the BOOLOMICS Universe</p>
+    <a href="#" class="btn">Get Started</a>
+</section>
 
-</div>
 @endsection
