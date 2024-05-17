@@ -25,24 +25,32 @@
             border: 2px solid white;
             box-shadow: inset -10px 0 10px rgba(92, 92, 92, 0.5);
             text-align: center;
+            position: relative;
+            .text {
+                text-wrap: wrap;
+                position: absolute;
+                top: 40%;
 
-            h5,
-            a {
-                opacity: 0;
-                transition: opacity 0.1s linear;
+                h5,
+                a {
+                    opacity: 0;
+                    transition: opacity 0.1s linear, transform 0.1s linear;
+                }
+                a {
+                    text-decoration: none;
+                    color: rgb(97, 97, 97);
+                }
             }
-            a {
-                text-decoration: none;
-                color: rgb(97, 97, 97);
-            }
-
             &:hover {
-                flex: 2;
+                flex-grow: 2;
                 box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 
                 h5,
                 a {
                     opacity: 1;
+                    transform: rotate(
+                        0deg
+                    ); /* Ruota il testo a 0 gradi (orizzontale) */
                 }
             }
         }
