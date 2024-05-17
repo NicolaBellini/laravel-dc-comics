@@ -26,6 +26,8 @@
                     <h6>Artists: {{ implode(', ', json_decode($comic->artists)) }}</h6>
                     <h6>Writers: {{ implode(', ', json_decode($comic->writers)) }}</h6>
                     <a href="{{route('comics.index')}}" class="btn">Torna</a>
+                    <a href="{{route('list')}}" class="btn">Torna alla lista</a>
+
 
                 </div>
                 <div class="w-25 ">

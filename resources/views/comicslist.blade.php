@@ -16,10 +16,14 @@
       <tbody>
         @foreach ($comics as $comic)
         <tr>
-          <th scope="row">{{$comic->title}}</th>
-          <td>{{$comic->price}}</td>
-          <td class="d-flex justify-content-center"><img src="{{$comic->img}}" alt="{{$comic->title}}" style="height: 100px"></td>
-          <td>{{$comic->sale_date}}</td>
+            <th scope="row">{{$comic->title}}</th>
+            <td>{{$comic->price}}</td>
+            <td class="d-flex justify-content-center">
+                <a href="{{ route('comics.show', $comic) }}">
+                    <img src="{{ $comic->img }}" alt="{{ $comic->title }}" style="height: 100px">
+                </a>
+            </td>
+            <td>{{$comic->sale_date}}</td>
         </tr>
         @endforeach
 
