@@ -6,7 +6,7 @@
 
 <form action="{{ route('comics.update', $comic) }}" method="POST" class="form-control">
     @csrf
-    @method('PATCH')
+    @method('PUT')
 
     <div class="row mb-3">
         <div class="col">
@@ -22,7 +22,7 @@
 
     <div class="mb-3">
         <label for="description" class="form-label">Nuova descrizione</label>
-        <textarea class="form-control" name="description" id="description" rows="3" required value="{{$comic->description}}" placeholder="{{$comic->description}}"></textarea>
+        <textarea class="form-control" name="description" id="description" rows="3" required value="{{$comic->description}}">{{$comic->description}}</textarea>
     </div>
 
     <div class="row mb-3">

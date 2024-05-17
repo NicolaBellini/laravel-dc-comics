@@ -89,6 +89,12 @@ class comicsController extends Controller
         $artists_array = explode(',', trim($form_data['artists'], '[]'));
         $writers_array = explode(',', trim($form_data['writers'], '[]'));
 
+        if($form_data['title'] === $comic->title){
+            $form_data['slug'] = $comic->slug;
+        }else{
+            $form_data['slug'] = Helper::getSlug($form_data['title'], new comic());
+        }
+
 
         $comic->title = $form_data['title'];
         $comic->description = $form_data['description'];
@@ -98,9 +104,11 @@ class comicsController extends Controller
         $comic->type = $form_data['type'];
         $comic->artists = json_encode($artists_array);
         $comic->writers = json_encode($writers_array);
-        $comic->slug = Helper::getSlug($comic->title, $comic);
+        $comic->slug = $form_data['slug'];
 
-        dump($comic);
+        // dump($comic);
+        $comic->save();
+        return redirect()->route('comics.show', $comic);
     }
 
     /**
