@@ -2,9 +2,9 @@
 
 @section('content')
 
-<div class="container d-flex justify-content-center">
+<div class="container-fluid d-flex justify-content-center" style="background-image: url('https://images.unsplash.com/photo-1516641051054-9df6a1aad654?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGNvbWljc3xlbnwwfHwwfHx8MA%3D%3D'); background-size:cover">
 
-    <div class="card m-5">
+    <div class="card m-5 w-75 ">
         <div class="tools">
             <div class="circle">
                 <a href="{{route('comics.index')}}" class="red box"></a>

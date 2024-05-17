@@ -15,10 +15,10 @@
                 <div class="d-flex w-100  flex-column align-item-center justify-content-center">
                     <a  href="{{route('comics.show',$comic)}}">Dettagli</a>
                     <a  href="{{route('comics.edit',$comic)}}">modifica</a>
-                    <form action="{{route('comics.destroy', $comic)}}" method="post" class="w-100 mt-5 " onsubmit="return confirm('Sei sicuro di voler eliminare questo fumetto?');">
+                    <form action="{{route('comics.destroy', $comic)}}" method="post" class="w-100 mt-5 " onsubmit="return confirm('Sei sicuro di voler eliminare questo fumetto?')">
 
-                        @csrf;
-                        @method('DELETE');
+                        @csrf
+                        @method('DELETE')
                         <button type="submit" class="btn btn-danger w-50">delete</button>
                     </form>
 
