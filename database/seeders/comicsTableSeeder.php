@@ -23,6 +23,7 @@ class comicsTableSeeder extends Seeder
             $comic->series = $item['series'];
             $comic->sale_date = $item['sale_date'];
             $comic->type = $item['type'];
+            $comic->img = $item['thumb'];
             $comic->artists = json_encode($item['artists']);
             $comic->writers = json_encode($item['writers']);
             $comic->slug = Helper::getSlug($comic->tile, new Comic());

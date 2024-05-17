@@ -48,6 +48,7 @@ class comicsController extends Controller
         $new_comic->series = $form_data['series'];
         $new_comic->sale_date = $form_data['sale_date'];
         $new_comic->type = $form_data['type'];
+        $new_comic->img = $form_data['img'];
         $new_comic->artists = json_encode($artists_array);
         $new_comic->writers = json_encode($writers_array);
         $new_comic->slug = Helper::getSlug($new_comic->tile, new Comic());

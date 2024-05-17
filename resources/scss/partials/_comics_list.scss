@@ -26,6 +26,7 @@
             box-shadow: inset -10px 0 10px rgba(92, 92, 92, 0.5);
             text-align: center;
             position: relative;
+
             .text {
                 text-wrap: wrap;
                 position: absolute;
@@ -38,12 +39,13 @@
                 }
                 a {
                     text-decoration: none;
-                    color: rgb(97, 97, 97);
+                    color: rgb(255, 255, 255);
                 }
             }
             &:hover {
                 flex-grow: 2;
                 box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+                filter: grayscale(100%);
 
                 h5,
                 a {
@@ -53,6 +55,21 @@
                     ); /* Ruota il testo a 0 gradi (orizzontale) */
                 }
             }
+            &:hover {
+                background-color: red;
+            }
         }
     }
+}
+
+.co {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 1; /* Opacità completa per l'immagine di sfondo */
+    transition: opacity 0.3s ease; /* Aggiungi una transizione per il cambio di opacità */
 }
