@@ -2,7 +2,7 @@
 
 @section('content')
 
-<h1>form</h1>
+<h1 class="text-center">INSERISCI UN NUOVO FUMETTO</h1>
 <form action="{{ route('comics.store') }}" method="POST" class="form-control">
     @csrf
 

@@ -41,6 +41,10 @@
                     text-decoration: none;
                     color: rgb(255, 255, 255);
                 }
+                button {
+                    opacity: 0;
+                    transition: opacity 0.1s linear, transform 0.1s linear;
+                }
             }
             &:hover {
                 flex-grow: 2;
@@ -48,15 +52,14 @@
                 filter: grayscale(100%);
 
                 h5,
-                a {
+                a,
+                button {
+                    // filter: none;
                     opacity: 1;
                     transform: rotate(
                         0deg
                     ); /* Ruota il testo a 0 gradi (orizzontale) */
                 }
-            }
-            &:hover {
-                background-color: red;
             }
         }
     }

@@ -2,7 +2,7 @@
 
 @section('content')
 
-<h1>Modifica il fumetto</h1>
+<h1 class="text-center">MODIFICA {{$comic->title}}</h1>
 
 <form action="{{ route('comics.update', $comic) }}" method="POST" class="form-control">
     @csrf
