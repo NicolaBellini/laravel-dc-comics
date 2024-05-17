@@ -7,6 +7,8 @@
     <h1>Nel catalogo sono presenti {{$comics}} fumetti</h1>
     <p>Explore the BOOLOMICS Universe</p>
     <a href="{{route('comics.index')}}" class="btn mb-4 ">Entra</a>
+    <a href="{{route('list')}}" class="btn mb-4 ">Lista</a>
+
     <a href="{{route('comics.create')}}" class="btn">Crea un nuovo fumetto</a>
 
 </section>

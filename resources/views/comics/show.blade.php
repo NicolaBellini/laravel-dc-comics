@@ -15,14 +15,24 @@
             {{-- @dump($comic->artists) --}}
             <h1>{{$comic->title}}</h1>
             <h5>{{$comic->description}}</h5>
-            <h4>{{$comic->price}}</h4>
-            <h5>{{$comic->series}}</h5>
-            <h5>{{$comic->sale_date}}</h5>
-            <h4>{{$comic->type}}</h4>
-            <h6>Artists: {{ implode(', ', json_decode($comic->artists)) }}</h6>
-            <h6>Writers: {{ implode(', ', json_decode($comic->writers)) }}</h6>
 
-            <a href="{{route('comics.index')}}" class="btn">Torna</a>
+            <div class="d-flex justify-content-around w-100 mt-2 " style="height: 300px">
+                <div class="w-75">
+
+                    <h4>{{$comic->price}}</h4>
+                    <h5>{{$comic->series}}</h5>
+                    <h5>{{$comic->sale_date}}</h5>
+                    <h4>{{$comic->type}}</h4>
+                    <h6>Artists: {{ implode(', ', json_decode($comic->artists)) }}</h6>
+                    <h6>Writers: {{ implode(', ', json_decode($comic->writers)) }}</h6>
+                    <a href="{{route('comics.index')}}" class="btn">Torna</a>
+
+                </div>
+                <div class="w-25 ">
+                    <img src="{{$comic->img}}" alt="{{$comic->title}}" style="height: 90%">
+                </div>
+
+            </div>
         </div>
     </div>
 </div>
