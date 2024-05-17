@@ -13,4 +13,9 @@ class PageController extends Controller
         return view('home', compact('comics'));
     }
 
+    public function comicslist(){
+        $comics = Comic::all();
+        return view('comicslist', compact('comics'));
+    }
+
 }
