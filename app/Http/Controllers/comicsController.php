@@ -36,6 +36,10 @@ class comicsController extends Controller
     {
         $form_data= $request->all();
 
+        $artists_array=explode(',', $form_data['artists']);
+        $writers_array=explode(',', $form_data['writers']);
+
+
         $new_comic= new comic();
 
         $new_comic->title = $form_data['title'];
@@ -44,10 +48,11 @@ class comicsController extends Controller
         $new_comic->series = $form_data['series'];
         $new_comic->sale_date = $form_data['sale_date'];
         $new_comic->type = $form_data['type'];
-        $new_comic->artists = json_encode($form_data['artists']);
-        $new_comic->writers = json_encode($form_data['writers']);
+        $new_comic->artists = json_encode($artists_array);
+        $new_comic->writers = json_encode($writers_array);
         $new_comic->slug = Helper::getSlug($new_comic->tile, new Comic());
 
+        // dd($new_comic);
 
         $new_comic->save();
         return redirect()->route('comics.index');
@@ -66,17 +71,36 @@ class comicsController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+
+    public function edit(comic $comic)
     {
-        //
+        return view('comics.edit', compact('comic'));
+
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+
+    public function update(Request $request, comic $comic)
     {
-        //
+
+        $form_data = $request->all();
+        $artists_array = explode(',', trim($form_data['artists'], '[]'));
+        $writers_array = explode(',', trim($form_data['writers'], '[]'));
+
+
+        $comic->title = $form_data['title'];
+        $comic->description = $form_data['description'];
+        $comic->price = $form_data['price'];
+        $comic->series = $form_data['series'];
+        $comic->sale_date = $form_data['sale_date'];
+        $comic->type = $form_data['type'];
+        $comic->artists = json_encode($artists_array);
+        $comic->writers = json_encode($writers_array);
+        $comic->slug = Helper::getSlug($comic->title, $comic);
+
+        dump($comic);
     }
 
     /**

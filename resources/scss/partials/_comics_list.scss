@@ -13,6 +13,7 @@
         .color {
             height: 100%;
             flex: 1;
+            flex-direction: column;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -23,17 +24,24 @@
             background-color: $blue-600;
             border: 2px solid white;
             box-shadow: inset -10px 0 10px rgba(92, 92, 92, 0.5);
+            text-align: center;
 
-            span {
+            h5,
+            a {
                 opacity: 0;
                 transition: opacity 0.1s linear;
+            }
+            a {
+                text-decoration: none;
+                color: rgb(97, 97, 97);
             }
 
             &:hover {
                 flex: 2;
                 box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 
-                span {
+                h5,
+                a {
                     opacity: 1;
                 }
             }
