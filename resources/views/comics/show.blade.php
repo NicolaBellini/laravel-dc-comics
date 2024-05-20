@@ -34,6 +34,7 @@
                     <img src="{{$comic->img}}" style="height: 90%">
                 </div>
 
+
             </div>
         </div>
     </div>

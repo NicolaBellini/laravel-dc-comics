@@ -11,6 +11,8 @@
           <th scope="col">prezzo</th>
           <th scope="col">immagine</th>
           <th scope="col">data di uscita</th>
+          <th scope="col">Azioni</th>
+
         </tr>
       </thead>
       <tbody>
@@ -24,6 +26,22 @@
                 </a>
             </td>
             <td>{{$comic->sale_date}}</td>
+            <td class="w-25">
+
+                    <form action="{{route('comics.destroy', $comic)}}" method="post" class="text-center w-100 "  onsubmit="return confirm('Sei sicuro di voler eliminare questo fumetto?')">
+
+                        @csrf
+                        @method('DELETE')
+                        <button type="submit" class="btn btn-danger w-50"><i class="fa-solid fa-trash"></i></button>
+                    </form>
+                    <div class="d-flex justify-content-center gap-4 align-content-center mt-3">
+                        <a href="{{route('comics.edit',$comic)}}" class="text-black fs-3 "><i class="fa-solid fa-pencil"></i></a>
+                        <a  href="{{route('comics.show',$comic)}}" class="text-black fs-3 "><i class="fa-solid fa-circle-info  "></i></a>
+
+                    </div>
+
+            </td>
+
         </tr>
         @endforeach
 
