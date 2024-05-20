@@ -11,7 +11,7 @@
           <th scope="col">prezzo</th>
           <th scope="col">immagine</th>
           <th scope="col">data di uscita</th>
-          <th scope="col">Azioni</th>
+          <th class="text-center">Azioni</th>
 
         </tr>
       </thead>
