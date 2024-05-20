@@ -25,8 +25,10 @@ class comicsController extends Controller
      */
     public function create()
     {
+        $title='Inserisci un nuovo fumetto';
+        $method='post';
 
-        return view('comics.create');
+        return view('comics.create-edit', compact('title', 'method'));
 
     }
 
@@ -76,7 +78,9 @@ class comicsController extends Controller
 
     public function edit(comic $comic)
     {
-        return view('comics.edit', compact('comic'));
+        $title='Modifica il fumetto'.$comic->title;
+        $method='put';
+        return view('comics.create-edit', compact('comic','method', 'title' ));
 
     }
 
