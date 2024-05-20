@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\comic;
 use App\Functions\Helper;
+use App\http\Requests\comicRequest;
 
 class comicsController extends Controller
 {
@@ -32,7 +33,7 @@ class comicsController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(comicRequest $request)
     {
         $form_data= $request->all();
 

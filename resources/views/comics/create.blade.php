@@ -9,12 +9,12 @@
     <div class="row mb-3">
         <div class="col">
             <label for="title" class="form-label">Titolo</label>
-            <input type="text" name="title" class="form-control" id="title" placeholder="Inserisci il titolo" required>
+            <input type="text" name="title" class="form-control" id="title" placeholder="Inserisci il titolo" >
         </div>
 
         <div class="col">
             <label for="price" class="form-label">Prezzo</label>
-            <input type="text" name="price" class="form-control" id="price" placeholder="Inserisci il prezzo" required>
+            <input type="text" name="price" class="form-control" id="price" placeholder="Inserisci il prezzo" >
         </div>
     </div>
 
@@ -26,7 +26,7 @@
     <div class="row mb-3">
         <div class="col">
             <label for="series" class="form-label">Serie</label>
-            <input type="text" name="series" class="form-control" id="series" placeholder="Inserisci la serie" required>
+            <input type="text" name="series" class="form-control" id="series" placeholder="Inserisci la serie" >
         </div>
 
          <div class="col">

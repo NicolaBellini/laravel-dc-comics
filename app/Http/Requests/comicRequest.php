@@ -22,13 +22,13 @@ class comicRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'title'=>'required'|'min:1'|'max:100',
+            'title'=>'required|min:1|max:100',
             'description'=>'nullable',
-            'price'=>'max:20'|'required',
-            'series'=>'max:100'|'required',
+            'price'=>'max:20|required',
+            'series'=>'max:100|required',
             'sale_date'=>'nullable',
-            'type'=>'max:100'|'required',
-            'img'=>'nullable'|'url',
+            'type'=>'max:100|required',
+            'img'=>'nullable|url',
             'artist'=>'nullable',
             'writers'=>'nullable',
         ];
