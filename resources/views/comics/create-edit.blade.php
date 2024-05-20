@@ -4,7 +4,7 @@
 
 
 <h1 class="text-center">{{$title}}</h1>
-<form action="{{ route('comics.store') }}" method="post" class="form-control">
+<form action="{{ $route }}" method="post" class="form-control">
     @csrf
     @method($method)
 
@@ -51,7 +51,7 @@
 
          <div class="col">
             <label for="series" class="form-label">immagine</label>
-            <input type="text" name="img" class="form-control @error('img') is-invalid  @enderror" id="series" placeholder="Inserisci l' url dell' immagine" value="{{old('img', isset($comic) ? $comic->img : '')}}">
+            <input type="text" name="img" class="form-control @error('img') is-invalid  @enderror" id="series" placeholder="Inserisci l' url dell' immagine" value="{{old('img', isset($comic) ? $comic->img : 'https://images.unsplash.com/photo-1620336655055-088d06e36bf0?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8Y29taWNzfGVufDB8fDB8fHww')}}">
             @error('img')
                 <div class="invalid-feedback">
                     {{ $message }}

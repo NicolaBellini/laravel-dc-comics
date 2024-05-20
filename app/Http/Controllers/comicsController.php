@@ -27,8 +27,9 @@ class comicsController extends Controller
     {
         $title='Inserisci un nuovo fumetto';
         $method='post';
+        $route=route('comics.store');
 
-        return view('comics.create-edit', compact('title', 'method'));
+        return view('comics.create-edit', compact('title', 'method', 'route'));
 
     }
 
@@ -80,7 +81,8 @@ class comicsController extends Controller
     {
         $title='Modifica il fumetto'.$comic->title;
         $method='put';
-        return view('comics.create-edit', compact('comic','method', 'title' ));
+        $route=route('comics.update',$comic);
+        return view('comics.create-edit', compact('comic','method', 'title','route' ));
 
     }
 

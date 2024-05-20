@@ -31,7 +31,7 @@
 
                 </div>
                 <div class="w-25 ">
-                    <img src="{{$comic->img}}" alt="{{$comic->title}}" style="height: 90%">
+                    <img src="{{$comic->img}}" style="height: 90%">
                 </div>
 
             </div>
